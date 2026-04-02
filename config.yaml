@@ -1,0 +1,31 @@
+data:
+  image_dir: "data/processed/images"
+  mask_dir: "data/processed/masks"
+  csv_path: "data/processed/train.csv"
+  img_size: [1000, 1000]
+  device: "cuda"
+  pixels_per_mm: 42.0
+
+model:
+  encoder: "efficientnet-b3"
+  encoder_weights: "imagenet"
+  activation: "sigmoid"
+
+training:
+  batch_size: 8
+  epochs: 100
+  lr: 0.0001
+  patience: 15
+
+augmentation:
+  use_aug: true
+  rotation_limit: 30
+  brightness_limit: 0.3
+  contrast_limit: 0.3
+  blur_limit: 3
+  hue_shift_limit: 10
+  sat_shift_limit: 20
+
+paths:
+  checkpoint_dir: "checkpoints"
+  log_dir: "logs"

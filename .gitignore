@@ -1,0 +1,15 @@
+# Ignore checkpoints
+checkpoints/*.pth
+checkpoints/*.pt
+
+# Ignore large data if needed (optional, but good practice)
+# data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit
+.streamlit/
